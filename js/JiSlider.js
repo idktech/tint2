@@ -101,7 +101,7 @@
 			auto: true,
 			start: 1,
 			time: 600,
-			stay: 3000,
+			stay: 9000,
 			controller: true,
 			easing: 'ease',
 			color: '#fff',
@@ -141,7 +141,7 @@
 		});
 
 		img.each(function () {
-			var div = $('<div>', {'class': 'jislider__img'}).css({
+			var div = $('<div>', { 'class': 'jislider__img' }).css({
 				backgroundImage: 'url(' + $(this).attr('src') + ')',
 			});
 			$(this).after(div);
@@ -153,33 +153,33 @@
 
 		// controller
 		if (setting.controller) {
-			var leftArrow = $('<div>', {'class': 'jislider__left-arrow'}).click(function () {
+			var leftArrow = $('<div>', { 'class': 'jislider__left-arrow' }).click(function () {
 				animate.control(--animate.index);
 			});
-			var leftArrowTop = $('<div>', {'class': 'jislider__left-arrow__top'}).css({
+			var leftArrowTop = $('<div>', { 'class': 'jislider__left-arrow__top' }).css({
 				backgroundColor: setting.color,
 			});
-			var leftArrowBottom = $('<div>', {'class': 'jislider__left-arrow__bottom'}).css({
+			var leftArrowBottom = $('<div>', { 'class': 'jislider__left-arrow__bottom' }).css({
 				backgroundColor: setting.color,
 			});
 
-			var rightArrow = $('<div>', {'class': 'jislider__right-arrow'}).click(function () {
+			var rightArrow = $('<div>', { 'class': 'jislider__right-arrow' }).click(function () {
 				animate.control(++animate.index);
 			});
-			var rightArrowTop = $('<div>', {'class': 'jislider__right-arrow__top'}).css({
+			var rightArrowTop = $('<div>', { 'class': 'jislider__right-arrow__top' }).css({
 				backgroundColor: setting.color,
 			});
-			var rightArrowBottom = $('<div>', {'class': 'jislider__right-arrow__bottom'}).css({
+			var rightArrowBottom = $('<div>', { 'class': 'jislider__right-arrow__bottom' }).css({
 				backgroundColor: setting.color,
 			});
 
-			var controller = $('<div>', {'class': 'jislider__controller'}).css({
+			var controller = $('<div>', { 'class': 'jislider__controller' }).css({
 				width: 20 * slides,
 			});
-			
+
 			var buttons = new Array();
 			for (var i = 0; i < slides; i++) {
-				buttons[i] = $('<div>', {'class': 'jislider__button', 'data-index': (i + 1)}).css({
+				buttons[i] = $('<div>', { 'class': 'jislider__button', 'data-index': (i + 1) }).css({
 					border: '1px solid ' + setting.color,
 				}).click(function () {
 					var index = $(this).data('index')
@@ -190,7 +190,7 @@
 			leftArrow.append(leftArrowTop, leftArrowBottom);
 			rightArrow.append(rightArrowTop, rightArrowBottom);
 			controller.append(buttons);
-			animate.init({controller: controller});
+			animate.init({ controller: controller });
 		}
 
 		animate.roll(0);
