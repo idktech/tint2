@@ -873,7 +873,7 @@ button.seri-w3ls:hover {
 /*-- //cases study --*/
 
 .modal-title {
-    font-family: 'Dr Sugiyama', cursive;
+    /* font-family: 'Dr Sugiyama', cursive; */
     color: #ff5252;
     font-size: 40px;
     letter-spacing: 1px;
